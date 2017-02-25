@@ -28,4 +28,8 @@ This repo contains a Jupyter notebook with qualitative data analysis and visuali
 
 ## Finally, several predictive algorithms are run on the data to identify the most effective feature and train the features to optimize the model performance.
 
+1.) Naive Bayes
+2.) Random Forest
+3.) Support Vector Machines
+4.) Neural Networks
 
