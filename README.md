@@ -25,6 +25,8 @@ This repo contains a Jupyter notebook with qualitative data analysis and visuali
 
 6.) Combined effects of all these factors
 
+![Effect of age and gender on survival](https://cloud.githubusercontent.com/assets/11637437/23442028/f332e4c0-fdda-11e6-973c-a55eab59f2ba.png)
+
 
 ## Finally, several predictive algorithms are run on the data to identify the most effective feature and train the features to optimize the model performance.
 
