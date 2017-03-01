@@ -1,4 +1,4 @@
-# Survival on the Titanic
+# A deep dive to see the survival patterns for the people who were on Titanic
 
 This repo contains a Jupyter notebook with qualitative data analysis and visualization of the data available from the Titanic disaster.
 
@@ -31,39 +31,47 @@ This repo contains a Jupyter notebook with qualitative data analysis and visuali
 #### Where did people board from?
 ![boarding-point](https://cloud.githubusercontent.com/assets/11637437/23479732/51c168f0-fe7a-11e6-96fe-e77a1d6edac4.png)
 
-![effect-of-class-on-survival](https://cloud.githubusercontent.com/assets/11637437/23479728/51be887e-fe7a-11e6-88d8-d91f5abefbe7.png)
-![family-age-survival](https://cloud.githubusercontent.com/assets/11637437/23479733/51c95060-fe7a-11e6-87b1-ba097ddc7c37.png)
-![family-survival](https://cloud.githubusercontent.com/assets/11637437/23479734/51ce78a6-fe7a-11e6-9a1a-4fa1ee43de2d.png)
-![gender-class-survival](https://cloud.githubusercontent.com/assets/11637437/23479735/51cface4-fe7a-11e6-9878-2f578c386e88.png)
-![gender-family-survival](https://cloud.githubusercontent.com/assets/11637437/23479736/51d47ff8-fe7a-11e6-942e-1da3d2cd5ed3.png)
 
+
+## Then we try to dive a little deeper - what factors saved someone from sinking? (No pun intended)
+
+
+#### 1) Overall Survival
 ![overall-survival](https://cloud.githubusercontent.com/assets/11637437/23479740/51dfadb0-fe7a-11e6-8f4e-298de952dbaa.png)
 
 
+##### Effect of Class on Survival
+![effect-of-class-on-survival](https://cloud.githubusercontent.com/assets/11637437/23479728/51be887e-fe7a-11e6-88d8-d91f5abefbe7.png)
 
-## Then we try to dig a little deeper - what factors saved someone from sinking?
-1.) Class
+#### How do people who were alone fare in this?
+![family-survival](https://cloud.githubusercontent.com/assets/11637437/23479734/51ce78a6-fe7a-11e6-9a1a-4fa1ee43de2d.png)
 
-2.) Gender
+Does it get nuanced with gender and age?
+![gender-family-survival](https://cloud.githubusercontent.com/assets/11637437/23479736/51d47ff8-fe7a-11e6-942e-1da3d2cd5ed3.png)
+![family-age-survival](https://cloud.githubusercontent.com/assets/11637437/23479733/51c95060-fe7a-11e6-87b1-ba097ddc7c37.png)
 
-3.) Age
-
-4.) Deck
-
-5.) Presence / Absence of company
-
-6.) Combined effects of all these factors
-
-#### 1. Effect of age and gender on survival 
+##### How does Survival change with age for different genders?
 ![Effect of age and gender on survival](https://cloud.githubusercontent.com/assets/11637437/23442028/f332e4c0-fdda-11e6-973c-a55eab59f2ba.png)
 
+##### Class and Gender on Survival
+![gender-class-survival](https://cloud.githubusercontent.com/assets/11637437/23479735/51cface4-fe7a-11e6-9878-2f578c386e88.png)
 
 
+## Finally, several predictive algorithms are run on the data to identify the most effective feature and train the features to optimize the model performance. Here is the accuracy obtained with the following models (Cross-Validation was employed)
 
-## Finally, several predictive algorithms are run on the data to identify the most effective feature and train the features to optimize the model performance.
+1. Logistic Regression Accuracy= 81.01
 
-1.) Naive Bayes
-2.) Random Forest
-3.) Support Vector Machines
-4.) Neural Networks
+2. kNN Accuracy = 75.98
+
+3. Naive Bayes Accuracy = 76.54
+
+4. Random Forest Accuracy = 78.77
+
+5. SVM Accuracy = 79.33
+
+6. Decision Tree Accuracy = 81.01
+
+7. BernoulliRBM Accuracy = 81.01
+
+Done for now.
 
