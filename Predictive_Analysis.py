@@ -37,7 +37,7 @@ X[:, 1] = labelencoder.fit_transform(X[:, 1])
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
@@ -68,18 +68,25 @@ print("\n\n1. Naive Bayes Accuracy = " + str(round(100*accuracy,2)))
 
 """Random Forest"""
 # Fitting Random Forest Classification to the Training set
+accu = []
 from sklearn.ensemble import RandomForestClassifier
-classifier = RandomForestClassifier(n_estimators = 116, criterion = 'entropy', random_state = 0)
-classifier.fit(X_train, y_train)
-
-# Predicting the Test set results
-y_pred = classifier.predict(X_test)
-
-# Making the Confusion Matrix
 from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-
-accuracy = (float(cm[0,0]) + cm[1,1])/(cm[0,0] + cm[0,1]+ cm[1,0] + cm[1,1])
+for i in range(100):
+    
+    classifier = RandomForestClassifier(n_estimators = 100, criterion = 'entropy')
+    classifier.fit(X_train, y_train)
+    
+    # Predicting the Test set results
+    y_pred = classifier.predict(X_test)
+    
+    # Making the Confusion Matrix
+    
+    cm = confusion_matrix(y_test, y_pred)
+    
+    accuracy = (float(cm[0,0]) + cm[1,1])/(cm[0,0] + cm[0,1]+ cm[1,0] + cm[1,1])
+    accu.append(accuracy)
+    
+accuracy = sum(accu)/len(accu)
 print("\n2. Random Forest Accuracy = " + str(round(100*accuracy,2)))
 
 
